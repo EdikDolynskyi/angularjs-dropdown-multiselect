@@ -234,7 +234,7 @@ directiveModule.directive('ngDropdownMultiselect', ['$filter', '$document', '$co
                 };
 
                 $scope.deselectAll = function (sendEvent) {
-                    sendEvent = sendEvent || true;
+                    sendEvent = (sendEvent === false) ? false : true;
 
                     if (sendEvent) {
                         $scope.externalEvents.onDeselectAll();
